@@ -1,0 +1,16 @@
+.articleItemWrapper{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+
+}
+
+.backgroundColor{
+    background-color: red;
+}
+
+#postItem{
+    border:3px solid black
+}
+
