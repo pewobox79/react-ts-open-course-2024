@@ -4,7 +4,7 @@ export type ColorPaleteRGBA = "rgba(255,255,255,1)" | "rgba(200,150,120,1)"
 type ButtonTypes = {
     text?: "Download" | "Login" | "Save",
     style: React.CSSProperties & {color: ColorPalete | ColorPaleteRGBA, backgroundColor: ColorPalete},
-    action: () => void,
+    action: () =>void,
     children: React.ReactElement[] | React.ReactElement
 }
 

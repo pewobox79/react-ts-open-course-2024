@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+
 import PostItem from "./PostItem";
+import { useFetch } from "../../hooks/useFetch";
 
 function BlogOverview() {
 
-    const [posts, setPosts] = useState([]);
-    const [isLoading, setIsLoading] = useState(false)
+    
+    //const [isLoading, setIsLoading] = useState(false)
 
+    
 
-    useEffect(() => {
+    /* useEffect(() => {
+        
         setIsLoading(true)
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
@@ -20,16 +23,19 @@ function BlogOverview() {
 
             })
 
-    }, [])
+    }, []) */
 
 
+    const { data = [], isLoading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');
 
-    const PostList = posts.map((item: { id: string, title: string }) => {
+    const PostList = data?.map((item: { id: string, title: string }) => {
         return <PostItem key={item.id} title={item.title} id={item.id} />
     })
 
     return (<>
         {isLoading ? <h4>data loading...</h4> : PostList}
+        {error && <p>{error.msg}</p> }
+        
     </>
     )
 }

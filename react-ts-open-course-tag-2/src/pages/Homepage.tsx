@@ -1,4 +1,7 @@
 import Button from "../components/Button"
+import ReRenderExercise from "../components/excercises/ReRenderExercise"
+import RenderItem1 from "../components/excercises/ReRenderExercise/RenderItem1"
+import RenderItem2 from "../components/excercises/ReRenderExercise/RenderItem2"
 import LoginForm from "../components/Forms/LoginForm"
 import LoginRefForm from "../components/Forms/LoginRefForm"
 
@@ -28,6 +31,13 @@ function Homepage() {
                 <p>click me</p>
 
             </Button>
+
+            <hr/>
+            <ReRenderExercise>
+                <RenderItem1/>
+                <RenderItem2/>
+
+            </ReRenderExercise>
         </>
     )
 }

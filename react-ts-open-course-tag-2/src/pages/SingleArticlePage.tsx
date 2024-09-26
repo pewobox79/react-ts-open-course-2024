@@ -9,6 +9,7 @@ function SingleArticlePage() {
     const [articleId, setArticleId] = useState(id)
 
     console.log("article id", articleId)
+    
     useEffect(() => {
 
         //abort controler demo nur bei reduziertem browser netz....throttle network
